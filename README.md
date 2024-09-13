@@ -48,8 +48,9 @@ To create tables and populate them with dummy data
 
 To run the main script and interact with the database, execute:
 
-`python main.py`
+`python main_asyncio.py` *FOR LARGE SIZED DATASETS*
 
+`python main.py` *FOR SMALL TO MEDIUM SIZED DATASETS*
 
 ## Code Overview
 `db_config/__init__.py`
@@ -60,6 +61,9 @@ Contains the SQLAlchemy engine, Base, and session configuration. This file loads
 
 Script for populating or manipulating the database. It uses the database configuration from db_config/__init__.py.
 
+`main_asyncio.py`
+Main script for comparing the rows in two tables using asyncio
+
 `main.py`
 
-Main script for comparing the rows in two tables.
+Main script for comparing the rows in two tables without using asyncio
